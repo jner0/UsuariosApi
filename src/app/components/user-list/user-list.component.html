@@ -1,0 +1,23 @@
+<section class="container">
+    <div class="title-container">
+        <div class="text-container">
+            <h1>Lista de Usuarios</h1>   
+            <h2>Centro Ecuatoriano Norteamericano</h2>   
+        </div>
+        <div class="image-container">
+            <img src="./assets/images/cen.jpg" alt="">
+        </div>
+    </div>
+    <hr>
+
+    <div class="row">
+        <article class="col-12 col-md-6 col-lg-3" *ngFor="let user of arrUsers">
+            <app-user-card [myUser]="user"></app-user-card>
+        </article>
+    </div>
+
+    <div class="d-flex justify-content-center my-5 ">
+        <button class="btn btn-primary m-3" (click)="goToPage(currentPage -1)" [disabled]="currentPage === 1">ANTERIOR</button>
+        <button class="btn btn-primary m-3" (click)="goToPage(currentPage +1)" [disabled]="currentPage === total_pages">SIGUIENTE</button>
+    </div>
+</section>
