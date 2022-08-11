@@ -1,0 +1,10 @@
+.texto-error{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 80px;
+    color: blue;
+}
+
+.texto-container{
+    text-align: center;
+}
