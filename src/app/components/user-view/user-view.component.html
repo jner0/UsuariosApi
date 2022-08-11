@@ -9,7 +9,7 @@
                 <h2 class="bottom-h2">{{myUser.last_name}}</h2>
                 <p> <strong>Nombre de Usuario:</strong>  {{myUser.username}}</p>
                 <p> <strong>Email:</strong> <a [href]="'mailto'+ myUser?.email"></a> {{myUser.email}}</p>
-                <button class="btn btn-danger ">Eliminar</button>
+                <button class="btn btn-danger " (click)="deleteUser(myUser.id)">Eliminar</button>
                 <button class="btn btn-primary m-3" [routerLink]="['/updateuser', myUser.id]">Actualizar</button>
                 <button class="btn btn-primary" [routerLink]="['/home']">Volver al Listado</button>
             </div>
